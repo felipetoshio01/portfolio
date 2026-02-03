@@ -1,0 +1,223 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* ========== PALETA ========== */
+    --primary-color: #6582E6;
+    --secondary-color: #4D5C91;
+    --tertiary-color: #4B4D58;
+
+    --alt-primary-color: #E5B42E;
+    --alt-secondary-color: #89753D;
+    --alt-tertiary-color: #65635B;
+   
+    --white: rgb(225, 225, 225);
+    --bg-color-main: white;
+    --bg-color-body: #e9e3d1;  /* OU rgb(210, 210, 210) */
+
+    --hover-color: rgba(236, 236, 236, 0.3);
+
+    /* ========== FONTES ========== */
+    --header-font: Cookie, cursive;
+    --text-font: 'Open Sans', Arial, Helvetica, sans-serif;
+
+    /* ========== SOMBRAS ========== */
+    --card-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    --header-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    --text-menu-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+
+    /* ========== ANIMAÇÕES ========== */
+    --hover-transition: background-color 0.2s ease-in-out;
+    --card-translate: transform 0.5s ease-in-out;
+}
+
+
+
+/* ==================== BODY ==================== */
+body {
+    font-family: var(--text-font);
+    background-color: var(--bg-color-body);
+}
+
+
+
+/* ==================== HEADER ==================== */
+header {
+    display: flex;
+    background-color: var(--primary-color);
+    padding: 0.75em;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--header-shadow);
+}
+
+/* O título do site (Toshio) */
+header h1 {
+    font: normal normal 3em var(--header-font);
+    color: var(--white);
+    text-align: center;
+}
+
+
+/* ========== MENU ========== */
+
+/* O botão do MENU */
+#menu-button {
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    width: auto;
+    height: max-content;
+    border: none;
+    background-color: transparent;
+    transition: var(--hover-transition);
+}
+
+/* O ícone do MENU */
+#menu-icon {
+    display: grid;
+    padding: 0.35em;
+    place-content: center;
+    color: var(--white);
+}
+
+/* Configurações de hover */
+#menu-button:hover {
+    background-color: var(--hover-color);
+}
+#menu-button:hover #menu-icon {
+    text-shadow: var(--text-menu-shadow);
+}
+
+
+
+/* ==================== NAV ==================== */
+nav {
+    display: none; /* Quando aparecer, vira flex */
+    justify-content: center;
+    flex-flow: row wrap;
+    border-top: 0.1em solid var(--white);
+    background-color: var(--secondary-color);
+    gap: 0.5em;
+    box-shadow: var(--header-shadow);
+}
+
+/* Links do NAV */
+nav a {
+    padding: 0.75em;
+    color: var(--white);
+    text-decoration: none;
+    position: relative;
+    transition: var(--hover-transition);
+}
+
+/* Hover dos links */
+nav a:hover {
+    background-color: var(--hover-color);
+}
+
+/* Barra amarela, abaixo dos links, para a animação */
+nav a::after {
+    content: '';
+    position: absolute;
+    background-color: var(--alt-primary-color);
+    height: 0.25em;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    transition: 0.4s;
+}
+/* Ativando a animação no hover */
+nav a:hover::after {
+    width: 100%;
+}
+
+
+
+/* ==================== MAIN ==================== */
+main {
+    max-width: 960px;
+    margin: auto;
+}
+
+main section {
+    padding: 1em;
+    background-color: var(--bg-color-main);
+    margin: 1em 0.5em;
+    border-radius: 1em;
+ }
+
+main h2 {
+    margin: 0.75em 0;
+    font-size: 1.7em;
+    color: var(--primary-color);
+}
+
+main p {
+    text-indent: 2em;
+    line-height: 1.3em;
+    margin: 0.5em 0;
+}
+
+main p > a {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+main p > a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+strong {color: var(--tertiary-color);}
+
+
+/* ==================== FOOTER ==================== */
+footer {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: var(--tertiary-color);
+    padding: 1em;
+    border-top: 0.25em solid var(--alt-primary-color);
+}
+
+footer p {
+    margin-bottom: 0.5em;
+    text-align: center;
+    color: var(--white);
+}
+
+footer p > a {
+    color: var(--alt-primary-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer p > a:hover {
+    text-decoration: underline;
+}
+
+/* ==================== MEDIA QUERIES ==================== */
+@media (min-width: 550px){
+    #menu-button{display: none;}
+
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        display: flex;
+    }
+
+    main section {
+        margin: 1em;
+    }
+}

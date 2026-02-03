@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+
+.content-text {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.perfil-icon {
+    aspect-ratio: 1/1;
+    max-width: 12em;
+    min-width: 0;
+    margin: 0 5em;
+    background-color: var(--tertiary-color);
+    border-radius: 50%;
+    align-self: center;
+    width: 100%;
+    border: 0.25em solid var(--primary-color);
+}
+
+.content-lang-cards {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: start;
+}
+
+.card {
+    display: flex;
+    padding: 1em;
+    margin: 0.5em 0;
+    background-color: var(--secondary-color);
+    border-radius: 1em;
+    color: var(--white);
+    box-shadow: var(--card-shadow);
+}
+
+.card-title {
+    color: var(--alt-primary-color);
+    font-size: 1.2em;
+}
+
+.lang-card {
+    height: 12em;
+    max-width: 24em;
+    flex-flow: column nowrap;
+    border-left: 1em solid var(--primary-color);
+    transition: var(--card-translate);
+}
+
+.lang-card:hover {
+    transform: scale(1.05);
+}
+
+@media (min-width: 550px) {
+    .lang-card {
+        height: 10em;
+    }
+
+    .lang-card:hover {
+        transform: scale(1.05) translateX(50px);
+    }
+}   
