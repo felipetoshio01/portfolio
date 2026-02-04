@@ -150,9 +150,14 @@ main {
 main section {
     padding: 1em;
     background-color: var(--bg-color-main);
-    margin: 1em 0.5em;
+    margin-bottom: 1em;
     border-radius: 1em;
- }
+    box-shadow: var(--card-shadow);
+}
+
+main section:nth-child(1) {
+    border-radius: 0 0 1em 1em;
+}
 
 main h2 {
     margin: 0.75em 0;
@@ -217,7 +222,5 @@ footer p > a:hover {
         display: flex;
     }
 
-    main section {
-        margin: 1em;
-    }
+
 }

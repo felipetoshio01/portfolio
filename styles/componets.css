@@ -1,11 +1,12 @@
 @charset "UTF-8";
 
-
+/* Container padrão que contém texto e mais outra coisa */
 .content-text {
     display: flex;
     flex-flow: column nowrap;
 }
 
+/* Uma <img> que mostra a imagem de alguém */
 .perfil-icon {
     aspect-ratio: 1/1;
     max-width: 12em;
@@ -18,12 +19,34 @@
     border: 0.25em solid var(--primary-color);
 }
 
+/* O container que contém os cards de programação */
 .content-lang-cards {
     display: flex;
     flex-flow: column nowrap;
-    align-items: start;
+    align-items: center;
 }
 
+
+.transparent {
+    background-color: transparent;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+.transparent h2 {
+    width: max-content;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 1em;
+    padding: 0.5em 2em;
+    border: 0.1em solid var(--secondary-color);
+}
+
+
+/* =========== A classe card =========== */
 .card {
     display: flex;
     padding: 1em;
@@ -34,13 +57,15 @@
     box-shadow: var(--card-shadow);
 }
 
+/* O título do cartão */
 .card-title {
     color: var(--alt-primary-color);
     font-size: 1.2em;
 }
 
+/* O card que mostra as linguagens */
 .lang-card {
-    height: 12em;
+    height: 10em;
     max-width: 24em;
     flex-flow: column nowrap;
     border-left: 1em solid var(--primary-color);
@@ -48,15 +73,5 @@
 }
 
 .lang-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.05) translateY(-5px);
 }
-
-@media (min-width: 550px) {
-    .lang-card {
-        height: 10em;
-    }
-
-    .lang-card:hover {
-        transform: scale(1.05) translateX(50px);
-    }
-}   
