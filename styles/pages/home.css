@@ -2,6 +2,7 @@
 
 /* Exclusivo da Home */
 
+
 div#hoshi-grid {
     display: grid;
     align-self: center;
@@ -44,4 +45,27 @@ div#hoshi-ex2 {
     grid-area: ex2;
     background: var(--alt-secondary-color) url(../../images/stars-landscape.jpg) left bottom no-repeat;
     background-size: cover;
+}
+
+img#android {
+    object-position: center top;
+}
+
+a#view-more-btn {
+    text-decoration: none;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    font-weight: bold;
+    border-radius: 1em;
+    width: max-content;
+    padding: 1em 2em;
+    font-size: 1.2em;
+    border: 0.2em solid var(--alt-secondary-color);
+    transition: var(--hover-transition);
+}
+
+a#view-more-btn:hover {
+    border: 0.2em solid var(--alt-primary-color);
+    background-color: var(--primary-color);
+    transform: scale(1.1);
 }

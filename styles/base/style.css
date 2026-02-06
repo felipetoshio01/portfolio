@@ -33,9 +33,10 @@
     --card-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
     --header-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     --text-menu-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    --card-text-shadow: 0px -5px 12px rgba(0, 0, 0, 0.3);
 
     /* ========== ANIMAÇÕES ========== */
-    --hover-transition: background-color 0.2s ease-in-out;
+    --hover-transition: all 0.3s ease-in-out;
     --card-translate: transform 0.5s ease-in-out;
 }
 
