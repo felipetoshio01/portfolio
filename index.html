@@ -17,38 +17,65 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
 </head>
 <body>
+
+    <!-- ========== HEADER ========== -->
     <header>
         <h1>Toshio</h1>
         <button id="menu-button"><span id="menu-icon" class="material-symbols-outlined">menu</span></button>
     </header>
+
+    <!-- ========== NAV ========== -->
     <nav>
         <a href="#">Início</a>
         <a href="#">Projetos</a>
     </nav>
 
+    <!-- ========== MAIN ========== -->
     <main>
+        <!-- ======= Parte de apresentação ======= -->
         <section class="content-text">
+
+            <!-- Minha foto -->
             <img class="perfil-icon" src="images/my-photo.jpeg" alt="Minha foto, Toshio">
-            <h2>Me apresentando</h2>
-            <p>Olá, sou <strong>Toshio</strong> e mexo na programação há mais de um semestre. O que começou com um simples hobby evoluiu para uma grande paixão neste vasto mundo da tecnologia, almejando constantemente aprender mais. Já tive experiência criando um aplicativo Android e construindo vários sites, sembre adorando o processo de criação deles.</p>
-            <p>Também adoro o ramo da matemática, buscando sempre problemas lógicos desafiadores que de forma criativa nos fazem pensar e descobrir novas coisas, tudo ao mesmo tempo que me preparo para competições científicas.</p>
-            <p>Atualmente faço parte de uma <a href="https://github.com/HoshiCorp" target="_blank" rel="external" title="Acesse a nossa organização">organização</a> do GitHub junto com minha amiga, <a href="https://github.com/Medina-10" target="_blank" rel="external" title="Acesse a conta da Medina">Medina</a>, onde muitos projetos incríveis estão esperando para ganhar vida.</p>
+
+            <!-- Região do texto de apresentação -->
+            <div class="text-wrapper">
+
+                <!-- Título -->
+                <h2>Me apresentando</h2>
+
+                <!-- Texto -->
+                <p>Olá, sou <strong>Toshio</strong> e mexo na programação há mais de um semestre. O que começou com um simples hobby evoluiu para uma grande paixão neste vasto mundo da tecnologia, almejando constantemente aprender mais. Já tive experiência criando um aplicativo Android e construindo vários sites, sembre adorando o processo de criação deles.</p>
+
+                <p>Também adoro o ramo da matemática, buscando sempre problemas lógicos desafiadores que de forma criativa nos fazem pensar e descobrir novas coisas, tudo ao mesmo tempo que me preparo para competições científicas.</p>
+
+                <p>Atualmente faço parte de uma <a href="https://github.com/HoshiCorp" target="_blank" rel="external" title="Acesse a nossa organização">organização</a> do GitHub junto com minha amiga, <a href="https://github.com/Medina-10" target="_blank" rel="external" title="Acesse a conta da Medina">Medina</a>, onde muitos projetos incríveis estão esperando para ganhar vida.</p>
+            </div>
         </section>
 
-        <section class="transparent">
-            <h2>Linguagens</h2>
-            <div class="content-lang-cards">
 
+        <!-- ======= Parte de cards de linguagens ======= -->
+        <section class="content-transparent">
+
+            <!-- Título -->
+            <h2>Linguagens</h2>
+
+            <!-- O GRID que contém os cards -->
+            <div class="content-cards ">
+
+                <!-- Card Python -->
                 <article class="card lang-card">
                     <h3 class="card-title">Python</h3>
                     <p>Experiência de mais de 6 meses criando uma aplicação mobile com Kivy e Kivy MD e bots de automação.</p>
                 </article>
 
+                <!-- Card HTML5 -->
                 <article class="card lang-card">
                     <h3 class="card-title">HTML5</h3>
                     <p>Foi criado mais de 6 sites usando sua tecnologia, tendo como base a sua versão atual.</p>
                 </article>
 
+                <!-- Card CSS3 -->
                 <article class="card lang-card">
                     <h3 class="card-title">CSS3</h3>
                     <p>Dominando suas propriedades fundamentais de Grid e Flexbox para responsividade.</p>
@@ -56,51 +83,78 @@
             </div>
         </section>
 
-        <!-- Dúvida interior... -->
-        <section  class="content-text">
-            <h2>A HoshiCorp</h2>
+
+        <!-- ======= Parte da HoshiCorp ======= -->
+        <section class="content-text">
+
+            <!-- GRID estilizado com imagens da empresa -->
             <div id="hoshi-grid">
-                <img id="hoshi-icon" src="images/star-logo.jpg" alt="Ícone da nossa empresa.">
-                <div id="hoshi-ex1"></div>
-                <div id="hoshi-ex2"> </div>
+                <img id="hoshi-icon" src="images/hoshicorp-logo.jpeg" alt="Ícone da nossa empresa.">
+                <div id="hoshi-ex-portrait"></div>
+                <div id="hoshi-ex-landscape"> </div>
             </div>
-            <p>É uma organização do GitHub criada junto de minha amiga com a finalidade de criar diversos projetos juntos para nos divertir, em que alguns planos contam com jogos, IA's e websites. Por mais que realizá-los possa ser difícil, estamos mais que motivados para atacar juntos cada problema, afinal, o que importa para nós no final é a jornada e tempo incrível que passamos juntos superando cada etapa.</p>
+            
+            <!-- Região do texto -->
+            <div class="text-wrapper">
+
+                <!-- Título -->
+                <h2>A HoshiCorp</h2>
+
+                <!-- Texto -->
+                <p>É uma organização do GitHub criada junto de minha amiga com a finalidade de criar diversos projetos juntos para nos divertir, em que alguns planos contam com jogos, IA's e websites. Por mais que realizá-los possa ser difícil, estamos mais que motivados para atacar juntos cada problema, afinal, o que importa para nós no final é a jornada e tempo incrível que passamos juntos superando cada etapa.</p>
+            </div>
         </section>
 
-        <section class="transparent">
+
+        <!-- ======= Exibição dos top 3 projetos ======= -->
+        <section class="content-transparent">
+
+            <!-- Título -->
             <h2>Projetos</h2>
 
-            <section class="card project-card">
-                <img src="images/android-site.jpg" alt="Visualização do site android" id="android">
-                <div class="project-card-text">
-                    <h3 class="card-title">Projeto Android</h3>
-                    <p>O primeiro projeto em HTML e CSS. Um site expondo a história do Android.</p>
-                </div>
-            </section>
+            <!-- GRID dos cards -->
+            <div class="content-cards">
 
-            <section class="card project-card">
-                <img src="images/kami-logo.jpeg" alt="Logo da aplicação, Kami">
-                <div class="project-card-text">
-                    <h3 class="card-title">Kami</h3>
-                    <p>Uma aplicação mobile feita em Python, sendo de longe o meu maior projeto. É uma aplicação de rede social para 6 pessoas.</p>
-                </div>
-            </section>
+                <!-- Card Android -->
+                <section class="card project-card">
+                    <img src="images/android-site.jpg" alt="Visualização do site android" id="android">
+                    <div class="project-card-text">
+                        <h3 class="card-title">Projeto Android</h3>
+                        <p>O primeiro projeto em HTML e CSS. Um site expondo a história do Android.</p>
+                    </div>
+                </section>
 
-            <section class="card project-card">
-                <img src="images/login-site.jpg" alt="Imagem da tela de login">
-                <div class="project-card-text">
-                    <h3 class="card-title">Projeto Login</h3>
-                    <p>Um dos primeiros sites que mexeram com responsividade para valer. Infelizmente é somente estético.</p>
-                </div>
-            </section>
+                <!-- Card Kami -->
+                <section class="card project-card">
+                    <img src="images/kami-logo.jpeg" alt="Logo da aplicação, Kami">
+                    <div class="project-card-text">
+                        <h3 class="card-title">Kami</h3>
+                        <p>Uma aplicação mobile feita em Python, sendo de longe o meu maior projeto. É uma aplicação de rede social para 6 pessoas.</p>
+                    </div>
+                </section>
 
+                <!-- Card Login -->
+                <section class="card project-card">
+                    <img src="images/login-site.jpg" alt="Imagem da tela de login">
+                    <div class="project-card-text">
+                        <h3 class="card-title">Projeto Login</h3>
+                        <p>Um dos primeiros sites que mexeram com responsividade para valer. Infelizmente é somente estético.</p>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Botão "ver mais" -->
             <a href="#project" id="view-more-btn">Ver mais</a>
-
         </section>
     </main>
 
+
+    <!-- ========== FOOTER ========== -->
     <footer>
+        <!-- Créditos Toshio -->
         <p>Site criado por <a href="https://github.com/felipetoshio01" target="_blank" rel="external" title="Acesse a conta do Toshio">Felipe Toshio</a></p>
+
+        <!-- Créditos Medina -->
         <p>Veja minha amiga e parceira, <a href="https://github.com/Medina-10" target="_blank" rel="external" title="Acesse a conta da Medina">Medina</a></p>
     </footer>
 </body>

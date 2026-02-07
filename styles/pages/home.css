@@ -2,30 +2,29 @@
 
 /* Exclusivo da Home */
 
-
+/* ==================== Grid da HOshiCorp ==================== */
 div#hoshi-grid {
     display: grid;
     align-self: center;
-
-
     width: clamp(15em, 80%, 22em);
+    flex: 0 0 clamp(15em, 80%, 22em);
 
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
-    "icon ex1"
-    "icon ex1"
-    "ex2 ex2 ";
+    "icon         ex-portrait"
+    "icon         ex-portrait"
+    "ex-landscape ex-landscape ";
 
     gap: 0.5em;
-    margin-bottom: 1em;
 }
 
+/* Conteúdos da GRID Hoshi */
 #hoshi-grid img, #hoshi-grid div{
-    border-radius: 1em;
-    
+    border-radius: 1em; 
 }
 
+/* O ícone da empresa */
 img#hoshi-icon {
     grid-area: icon;
     aspect-ratio: 1/1;
@@ -35,22 +34,28 @@ img#hoshi-icon {
     object-fit: contain;
 }
 
-div#hoshi-ex1 {
-    grid-area: ex1;
-    background: var(--alt-primary-color) url(../../images/stars-portrait.jpg) center bottom no-repeat;
+/* As duas divs de conteúdo extra */
+div#hoshi-ex-portrait {
+    grid-area: ex-portrait;
+    background: var(--alt-primary-color) url(../../images/sky-portrait.jpg) center bottom no-repeat;
     background-size: cover;
 }
 
-div#hoshi-ex2 {
-    grid-area: ex2;
-    background: var(--alt-secondary-color) url(../../images/stars-landscape.jpg) left bottom no-repeat;
+div#hoshi-ex-landscape {
+    grid-area: ex-landscape;
+    background: var(--alt-secondary-color) url(../../images/sky-landscape.jpg) left bottom no-repeat;
     background-size: cover;
 }
 
+
+/* ==================== Local dos cards de Projetos ==================== */
+
+/* Imagem do android, centralizada diferente */
 img#android {
     object-position: center top;
 }
 
+/* Botão de "ver mais" */
 a#view-more-btn {
     text-decoration: none;
     background-color: var(--secondary-color);
@@ -67,5 +72,6 @@ a#view-more-btn {
 a#view-more-btn:hover {
     border: 0.2em solid var(--alt-primary-color);
     background-color: var(--primary-color);
-    transform: scale(1.1);
+    box-shadow: var(--card-shadow);
+    transform: translateY(-2px);
 }

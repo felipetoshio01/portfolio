@@ -1,42 +1,47 @@
 @charset "UTF-8";
 
+/* Classes definidas */
+
+
+/* ==================== CONTAINERS (sections) ==================== */
+
 /* Container padrão que contém texto e mais outra coisa */
 .content-text {
     display: flex;
-    flex-flow: column nowrap;
-}
-
-/* Uma <img> que mostra a imagem de alguém */
-.perfil-icon {
-    aspect-ratio: 1/1;
-    max-width: 12em;
-    min-width: 0;
-    margin: 0 5em;
-    background-color: var(--tertiary-color);
-    border-radius: 50%;
-    align-self: center;
-    width: 100%;
-    border: 0.25em solid var(--primary-color);
-}
-
-/* O container que contém os cards de programação */
-.content-lang-cards {
-    display: flex;
+    padding: clamp(1em, 5%, 4em) clamp(1em, 10%, 10em);
     flex-flow: column nowrap;
     align-items: center;
+    gap: 1.7em;
 }
 
+@media (min-width: 750px) {
+    .content-text {
+        flex-flow: row;
+    }
+}
 
-.transparent {
+/* Container GRID que mostra Cards */
+.content-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+
+    gap: 1.5em;
+    padding: 1em clamp(1em, 10%, 10em);
+    width: 100%;
+}
+
+/* Container notadamente invisível, para mostrar Cards */
+.content-transparent {
     background-color: transparent;
     box-shadow: none;
     display: flex;
     align-items: center;
     flex-flow: column nowrap;
-    gap: 1em;
+    gap: 1.7em;
+    padding-bottom: 2em;
 }
-
-.transparent > h2 {
+/* Título personalizado do container invisível */
+.content-transparent > h2 {
     width: max-content;
     text-align: center;
     color: var(--white);
@@ -47,56 +52,62 @@
 }
 
 
-/* =========== A classe card =========== */
+
+/* ==================== CARDS ==================== */
+
+/* A classe mãe Card */
 .card {
     display: flex;
-    margin: 0.5em 0;
     background-color: var(--secondary-color);
     border-radius: 1em;
     color: var(--white);
+    flex-flow: column nowrap;
     box-shadow: var(--card-shadow);
     transition: var(--card-translate);
 }
 
-/* O título do cartão */
+.card:hover {
+    transform: scale(1.01) translateY(-5px);
+}
+
+/* O título do Card */
 .card-title {
     color: var(--alt-primary-color);
     font-size: 1.2em;
 }
 
-.card:hover {
-    transform: scale(1.05) translateY(-5px);
-}
-
-/* O card que mostra as linguagens */
+/* O Card que mostra as linguagens */
 .lang-card {
-    height: 10em;
+    height: 12em;
     padding: 1em;
-    max-width: 24em;
-    flex-flow: column nowrap;
+    justify-content: center;
     border-left: 1em solid var(--primary-color);
-    
 }
 
-
-
-.project-card {
-    flex-flow: column nowrap;
-    padding: 0;
-    max-width: 24em;
-}
-
+/* Área do texto dos Card de projetos */
 .project-card-text {
     padding: 1em;
-    box-shadow: var(--card-text-shadow);
-    border-radius: 1em;
+    border-radius: 0 0 1em 1em;
 }
 
+/* Imagem dos Cards de projetos */
 .project-card img {
     width: 100%;
     height: 14em;
     border-radius: 1em 1em 0 0;
-    aspect-ratio: none;
     object-fit: cover;
-    
+}
+
+
+
+/* ==================== OUTROS ==================== */
+
+/* Uma <img> que mostra a imagem de alguém */
+.perfil-icon {
+    aspect-ratio: 1/1;
+    width: clamp(12em, 50%, 15em);
+    background-color: var(--tertiary-color);
+    border-radius: 50%;
+    align-self: center;
+    border: 0.25em solid var(--primary-color);
 }
