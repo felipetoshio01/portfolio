@@ -3,15 +3,9 @@
 img {
     aspect-ratio: 3/2;
     object-fit: cover;
+    border-radius: 1em;
+    object-position: center;
     width: 100%;
-}
-
-#store {
-    object-position: left top;
-}
-
-#login {
-    object-position: center center;
 }
 
 .image-wrapper {
