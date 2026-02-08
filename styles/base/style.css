@@ -165,16 +165,17 @@ main p {
     margin: 0.5em 0;
 }
 
-main p > a {
+main  a {
     color: var(--primary-color);
     font-weight: bold;
     text-decoration: none;
 }
 
-main p > a:hover {
+main  a:hover {
     color: var(--primary-color);
     text-decoration: underline;
 }
+
 
 strong {color: var(--tertiary-color);}
 

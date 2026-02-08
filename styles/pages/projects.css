@@ -1,1 +1,19 @@
 @charset "UTF-8";
+
+img {
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    width: 100%;
+}
+
+#store {
+    object-position: left top;
+}
+
+#login {
+    object-position: center center;
+}
+
+.image-wrapper {
+    flex: 1 0 clamp(20em, 50%, 25em);
+}
