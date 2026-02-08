@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+/* Exclusivo do projects */
+
+/* A imagem de cada projeto */
 img {
     aspect-ratio: 3/2;
     object-fit: cover;
@@ -8,6 +11,3 @@ img {
     width: 100%;
 }
 
-.image-wrapper {
-    flex: 1 0 clamp(20em, 50%, 25em);
-}
