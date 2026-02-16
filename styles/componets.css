@@ -72,6 +72,7 @@
 
 .card:hover {
     transform: scale(1.01) translateY(-5px);
+    cursor: pointer;
 }
 
 /* O título do Card */
@@ -128,7 +129,7 @@
     margin-bottom: 0.25em;
 }
 
-/* Botão de "ver mais" */
+/* Botão de redirecionamento */
 .link-button {
     text-decoration: none;
     background-color: var(--secondary-color);
@@ -144,6 +145,7 @@
 
 .link-button:hover {
     color: var(--white);
+    text-decoration: none;
     border: 0.2em solid var(--alt-primary-color);
     background-color: var(--primary-color);
     box-shadow: var(--card-shadow);

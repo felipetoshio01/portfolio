@@ -2,7 +2,7 @@
 
 /* Exclusivo da Home */
 
-/* ==================== Grid da HOshiCorp ==================== */
+/* ==================== Grid da HoshiCorp ==================== */
 div#hoshi-grid {
     display: grid;
     align-self: center;
@@ -10,7 +10,7 @@ div#hoshi-grid {
     flex: 0 0 clamp(15em, 80%, 22em);
 
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas: 
     "icon         ex-portrait"
     "icon         ex-portrait"
